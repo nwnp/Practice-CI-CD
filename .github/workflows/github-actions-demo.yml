@@ -5,8 +5,10 @@ on:
     branches:
       - main
 jobs:
-  steps:
-    - run: echo "🚀 ci pipeline start 🚀"
-    - name: Check out repository code
-      uses: actions/checkout@v3
-    - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🚀 ci pipeline start 🚀"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
