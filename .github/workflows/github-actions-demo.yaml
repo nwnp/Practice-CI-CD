@@ -1,8 +1,9 @@
 name: Github Actions Demo
 run-name: ${{ github.actor }} is testing out Github Actions
 on:
-  branches:
-    - main
+  push:
+    branches:
+      - main
 jobs:
   steps:
     - run: echo "🚀 ci pipeline start 🚀"
