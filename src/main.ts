@@ -8,7 +8,9 @@ async function bootstrap() {
   const PORT = 3000;
   const HOST = 'localhost';
   app.listen(PORT, () => {
-    logger.verbose(`The server is on http://${HOST}:${PORT}`);
+    logger.verbose(
+      `The server is on http://${HOST}:${PORT}(${process.env.NODE_ENV})`,
+    );
   });
 }
 bootstrap();
